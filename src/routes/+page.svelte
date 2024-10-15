@@ -52,24 +52,26 @@
 
 <article>
   <h1>Your Top 10 Links</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Link</th>
-        <th>Short Link</th>
-        <th>Clicks</th>
-      </tr>
-    </thead>
-    <tbody>
-      {#each data.top10Links as link, i}
+  <div class="overflow-auto">
+    <table class="striped">
+      <thead>
         <tr>
-          <td>{i + 1}</td>
-          <td>{link.url}</td>
-          <td><a href={getShortLink(link.shortSlug)}>{link.shortSlug}</a></td>
-          <td>{link.clicks}</td>
+          <th>#</th>
+          <th>Link</th>
+          <th>Short Link</th>
+          <th>Clicks</th>
         </tr>
-      {/each}
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        {#each data.top10Links as link, i}
+          <tr>
+            <td>{i + 1}</td>
+            <td>{link.url}</td>
+            <td><a href={getShortLink(link.shortSlug)}>{link.shortSlug}</a></td>
+            <td>{link.clicks}</td>
+          </tr>
+        {/each}
+      </tbody>
+    </table>
+  </div>
 </article>

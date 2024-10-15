@@ -18,16 +18,14 @@
           <a href="/auth/register"> <button>Register</button></a>
         </li>
       {:else}
-        <li role="list" dir="rtl">
-          <a href="#" aria-haspopup="listbox">
-            <img
-              src="https://api.dicebear.com/5.x/thumbs/svg?radius=50&seed={data
-                .user.name}"
-              alt="User Avatar"
-              width="56"
-            />
-          </a>
-          <ul role="listbox">
+        <details class="dropdown" >
+          <summary><img
+            src="https://api.dicebear.com/5.x/thumbs/svg?radius=50&seed={data
+              .user.name}"
+            alt="User Avatar"
+            width="56"
+          /></summary>
+          <ul dir="rtl">
             <li>
               <span>Logged in as <strong>{data.user.name}</strong></span>
               <br />
@@ -39,7 +37,7 @@
               </form>
             </li>
           </ul>
-        </li>
+        </details>
       {/if}
     </ul>
   </nav>
