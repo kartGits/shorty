@@ -6,7 +6,7 @@
   <nav style="padding: 0 1rem;">
     <ul>
       <li>
-        <strong><a href="/">Shorty</a></strong>
+        <strong><a href="/">URL Simplified</a></strong>
       </li>
     </ul>
     <ul>
